@@ -230,7 +230,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 
 - (id)initWithPhotoURLs:(NSArray *)photoURLsArray {
     if ((self = [self init])) {
-        NSArray *photosArray = [IDMPhoto photosWithURLs:photoURLsArray];
+        NSArray *photosArray = [IDMBasicPhoto photosWithURLs:photoURLsArray];
 		_photos = [[NSMutableArray alloc] initWithArray:photosArray];
 	}
 	return self;
@@ -238,7 +238,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
 
 - (id)initWithPhotoURLs:(NSArray *)photoURLsArray animatedFromView:(UIView*)view {
     if ((self = [self init])) {
-        NSArray *photosArray = [IDMPhoto photosWithURLs:photoURLsArray];
+        NSArray *photosArray = [IDMBasicPhoto photosWithURLs:photoURLsArray];
 		_photos = [[NSMutableArray alloc] initWithArray:photosArray];
         _senderViewForAnimation = view;
 	}
@@ -996,7 +996,7 @@ NSLocalizedStringFromTableInBundle((key), nil, [NSBundle bundleWithPath:[[NSBund
     page.tag = PAGE_INDEX_TAG_OFFSET + index;
     page.photo = [self photoAtIndex:index];
     
-    __block __weak IDMPhoto *photo = (IDMPhoto*)page.photo;
+    __block __weak IDMBasicPhoto *photo = (IDMBasicPhoto*)page.photo;
     __weak IDMZoomingScrollView* weakPage = page;
     photo.progressUpdateBlock = ^(CGFloat progress){
         [weakPage setProgress:progress forPhoto:photo];

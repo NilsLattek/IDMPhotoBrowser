@@ -27,7 +27,7 @@
 		BDDE863029564DCEAF3437FF /* libPods-PhotoBrowserDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48F398EC6BD549F7A2FDC451 /* libPods-PhotoBrowserDemo.a */; };
 		D114BB411A32269C00E677FE /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D114BB401A32269C00E677FE /* Launch Screen.xib */; };
 		D1574968178DB94900B0211A /* IDMCaptionView.m in Sources */ = {isa = PBXBuildFile; fileRef = D157494F178DB94900B0211A /* IDMCaptionView.m */; };
-		D1574969178DB94900B0211A /* IDMPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D1574951178DB94900B0211A /* IDMPhoto.m */; };
+		D1574969178DB94900B0211A /* IDMBasicPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = D1574951178DB94900B0211A /* IDMBasicPhoto.m */; };
 		D157496A178DB94900B0211A /* IDMPhotoBrowser.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D1574952178DB94900B0211A /* IDMPhotoBrowser.bundle */; };
 		D157496B178DB94900B0211A /* IDMPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = D1574954178DB94900B0211A /* IDMPhotoBrowser.m */; };
 		D157496C178DB94900B0211A /* IDMTapDetectingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = D1574957178DB94900B0211A /* IDMTapDetectingImageView.m */; };
@@ -85,8 +85,8 @@
 		D114BB401A32269C00E677FE /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 		D157494E178DB94900B0211A /* IDMCaptionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDMCaptionView.h; sourceTree = "<group>"; };
 		D157494F178DB94900B0211A /* IDMCaptionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDMCaptionView.m; sourceTree = "<group>"; };
-		D1574950178DB94900B0211A /* IDMPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDMPhoto.h; sourceTree = "<group>"; };
-		D1574951178DB94900B0211A /* IDMPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDMPhoto.m; sourceTree = "<group>"; };
+		D1574950178DB94900B0211A /* IDMBasicPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDMBasicPhoto.h; sourceTree = "<group>"; };
+		D1574951178DB94900B0211A /* IDMBasicPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDMBasicPhoto.m; sourceTree = "<group>"; };
 		D1574952178DB94900B0211A /* IDMPhotoBrowser.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IDMPhotoBrowser.bundle; sourceTree = "<group>"; };
 		D1574953178DB94900B0211A /* IDMPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IDMPhotoBrowser.h; sourceTree = "<group>"; };
 		D1574954178DB94900B0211A /* IDMPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IDMPhotoBrowser.m; sourceTree = "<group>"; };
@@ -257,8 +257,8 @@
 				D157494E178DB94900B0211A /* IDMCaptionView.h */,
 				D157494F178DB94900B0211A /* IDMCaptionView.m */,
 				D11464B61802FFC4005B7BC3 /* IDMPBConstants.h */,
-				D1574950178DB94900B0211A /* IDMPhoto.h */,
-				D1574951178DB94900B0211A /* IDMPhoto.m */,
+				D1574950178DB94900B0211A /* IDMBasicPhoto.h */,
+				D1574951178DB94900B0211A /* IDMBasicPhoto.m */,
 				D1574953178DB94900B0211A /* IDMPhotoBrowser.h */,
 				D1574954178DB94900B0211A /* IDMPhotoBrowser.m */,
 				D1574955178DB94900B0211A /* IDMPhotoProtocol.h */,
@@ -418,7 +418,7 @@
 				4C6F97A214AF734900F8389A /* AppDelegate.m in Sources */,
 				4C6F97B314AF737E00F8389A /* Menu.m in Sources */,
 				D1574968178DB94900B0211A /* IDMCaptionView.m in Sources */,
-				D1574969178DB94900B0211A /* IDMPhoto.m in Sources */,
+				D1574969178DB94900B0211A /* IDMBasicPhoto.m in Sources */,
 				D157496B178DB94900B0211A /* IDMPhotoBrowser.m in Sources */,
 				D157496C178DB94900B0211A /* IDMTapDetectingImageView.m in Sources */,
 				D157496D178DB94900B0211A /* IDMTapDetectingView.m in Sources */,

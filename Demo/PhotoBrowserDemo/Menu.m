@@ -79,30 +79,30 @@
     // Create an array to store IDMPhoto objects
     NSMutableArray *photos = [NSMutableArray new];
     
-    IDMPhoto *photo;
+    IDMBasicPhoto *photo;
     
     if(buttonSender.tag == 101)
     {
-        photo = [IDMPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo1l" ofType:@"jpg"]];
+        photo = [IDMBasicPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo1l" ofType:@"jpg"]];
         photo.caption = @"Grotto of the Madonna";
         [photos addObject:photo];
     }
     
-    photo = [IDMPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo3l" ofType:@"jpg"]];
+    photo = [IDMBasicPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo3l" ofType:@"jpg"]];
     photo.caption = @"York Floods";
     [photos addObject:photo];
     
-    photo = [IDMPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo2l" ofType:@"jpg"]];
+    photo = [IDMBasicPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo2l" ofType:@"jpg"]];
     photo.caption = @"The London Eye is a giant Ferris wheel situated on the banks of the River Thames, in London, England.";
     [photos addObject:photo];
     
-    photo = [IDMPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo4l" ofType:@"jpg"]];
+    photo = [IDMBasicPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo4l" ofType:@"jpg"]];
     photo.caption = @"Campervan";
     [photos addObject:photo];
     
     if(buttonSender.tag == 102)
     {
-        photo = [IDMPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo1l" ofType:@"jpg"]];
+        photo = [IDMBasicPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo1l" ofType:@"jpg"]];
         photo.caption = @"Grotto of the Madonna";
         [photos addObject:photo];
     }
@@ -185,11 +185,11 @@
     // Create an array to store IDMPhoto objects
 	NSMutableArray *photos = [NSMutableArray new];
     
-    IDMPhoto *photo;
+    IDMBasicPhoto *photo;
     
     if(indexPath.section == 0) // Local photo
     {
-        photo = [IDMPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo2l" ofType:@"jpg"]];
+        photo = [IDMBasicPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo2l" ofType:@"jpg"]];
         photo.caption = @"The London Eye is a giant Ferris wheel situated on the banks of the River Thames, in London, England.";
         [photos addObject:photo];
 	}
@@ -197,25 +197,25 @@
     {
         if(indexPath.row == 0) // Local Photos
         {
-            photo = [IDMPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo1l" ofType:@"jpg"]];
+            photo = [IDMBasicPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo1l" ofType:@"jpg"]];
             photo.caption = @"Grotto of the Madonna";
 			[photos addObject:photo];
            
-            photo = [IDMPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo2l" ofType:@"jpg"]];
+            photo = [IDMBasicPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo2l" ofType:@"jpg"]];
             photo.caption = @"The London Eye is a giant Ferris wheel situated on the banks of the River Thames, in London, England.";
 			[photos addObject:photo];
             
-            photo = [IDMPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo3l" ofType:@"jpg"]];
+            photo = [IDMBasicPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo3l" ofType:@"jpg"]];
             photo.caption = @"York Floods";
 			[photos addObject:photo];
             
-            photo = [IDMPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo4l" ofType:@"jpg"]];
+            photo = [IDMBasicPhoto photoWithFilePath:[[NSBundle mainBundle] pathForResource:@"photo4l" ofType:@"jpg"]];
             photo.caption = @"Campervan";
 			[photos addObject:photo];
         }
         else if(indexPath.row == 1 || indexPath.row == 2) // Photos from Flickr or Flickr - Custom
         {
-            NSArray *photosWithURL = [IDMPhoto photosWithURLs:[NSArray arrayWithObjects:[NSURL URLWithString:@"http://farm4.static.flickr.com/3567/3523321514_371d9ac42f_b.jpg"], @"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b_b.jpg", [NSURL URLWithString:@"http://farm4.static.flickr.com/3364/3338617424_7ff836d55f_b.jpg"], @"http://farm4.static.flickr.com/3590/3329114220_5fbc5bc92b_b.jpg", nil]];
+            NSArray *photosWithURL = [IDMBasicPhoto photosWithURLs:[NSArray arrayWithObjects:[NSURL URLWithString:@"http://farm4.static.flickr.com/3567/3523321514_371d9ac42f_b.jpg"], @"http://farm4.static.flickr.com/3629/3339128908_7aecabc34b_b.jpg", [NSURL URLWithString:@"http://farm4.static.flickr.com/3364/3338617424_7ff836d55f_b.jpg"], @"http://farm4.static.flickr.com/3590/3329114220_5fbc5bc92b_b.jpg", nil]];
             
             photos = [NSMutableArray arrayWithArray:photosWithURL];
         }

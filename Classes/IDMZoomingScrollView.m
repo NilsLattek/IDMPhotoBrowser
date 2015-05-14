@@ -8,7 +8,7 @@
 
 #import "IDMZoomingScrollView.h"
 #import "IDMPhotoBrowser.h"
-#import "IDMPhoto.h"
+#import "IDMBasicPhoto.h"
 
 // Declare private methods of browser
 @interface IDMPhotoBrowser ()
@@ -137,8 +137,8 @@
 	}
 }
 
-- (void)setProgress:(CGFloat)progress forPhoto:(IDMPhoto*)photo {
-    IDMPhoto *p = (IDMPhoto*)self.photo;
+- (void)setProgress:(CGFloat)progress forPhoto:(IDMBasicPhoto*)photo {
+    IDMBasicPhoto *p = (IDMBasicPhoto*)self.photo;
 
     if ([photo.photoURL.absoluteString isEqualToString:p.photoURL.absoluteString]) {
         if (_progressView.progress < progress) {

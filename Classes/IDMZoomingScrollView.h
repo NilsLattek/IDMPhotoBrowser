@@ -13,7 +13,7 @@
 
 #import <DACircularProgress/DACircularProgressView.h>
 
-@class IDMPhotoBrowser, IDMPhoto, IDMCaptionView;
+@class IDMPhotoBrowser, IDMBasicPhoto, IDMCaptionView;
 
 @interface IDMZoomingScrollView : UIScrollView <UIScrollViewDelegate, IDMTapDetectingImageViewDelegate, IDMTapDetectingViewDelegate> {
 	
@@ -35,7 +35,7 @@
 - (id)initWithPhotoBrowser:(IDMPhotoBrowser *)browser;
 - (void)displayImage;
 - (void)displayImageFailure;
-- (void)setProgress:(CGFloat)progress forPhoto:(IDMPhoto*)photo;
+- (void)setProgress:(CGFloat)progress forPhoto:(IDMBasicPhoto*)photo;
 - (void)setMaxMinZoomScalesForCurrentBounds;
 - (void)prepareForReuse;
 

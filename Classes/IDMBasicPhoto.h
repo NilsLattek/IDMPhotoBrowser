@@ -1,5 +1,5 @@
 //
-//  IDMPhoto.h
+//  IDMBasicPhoto.h
 //  IDMPhotoBrowser
 //
 //  Created by Michael Waterfall on 17/10/2010.
@@ -14,7 +14,7 @@
 // If you want to handle photos, caching, decompression
 // yourself then you can simply ensure your custom data model
 // conforms to IDMPhotoProtocol
-@interface IDMPhoto : NSObject <IDMPhoto>
+@interface IDMBasicPhoto : NSObject <IDMPhoto>
 
 // Progress download block, used to update the circularView
 typedef void (^IDMProgressUpdateBlock)(CGFloat progress);
@@ -25,9 +25,9 @@ typedef void (^IDMProgressUpdateBlock)(CGFloat progress);
 @property (nonatomic, strong) IDMProgressUpdateBlock progressUpdateBlock;
 
 // Class
-+ (IDMPhoto *)photoWithImage:(UIImage *)image;
-+ (IDMPhoto *)photoWithFilePath:(NSString *)path;
-+ (IDMPhoto *)photoWithURL:(NSURL *)url;
++ (IDMBasicPhoto *)photoWithImage:(UIImage *)image;
++ (IDMBasicPhoto *)photoWithFilePath:(NSString *)path;
++ (IDMBasicPhoto *)photoWithURL:(NSURL *)url;
 
 + (NSArray *)photosWithImages:(NSArray *)imagesArray;
 + (NSArray *)photosWithFilePaths:(NSArray *)pathsArray;

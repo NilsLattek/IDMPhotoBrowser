@@ -1,16 +1,16 @@
 //
-//  IDMPhoto.m
+//  IDMBasicPhoto.m
 //  IDMPhotoBrowser
 //
 //  Created by Michael Waterfall on 17/10/2010.
 //  Copyright 2010 d3i. All rights reserved.
 //
 
-#import "IDMPhoto.h"
+#import "IDMBasicPhoto.h"
 #import "IDMPhotoBrowser.h"
 
 // Private
-@interface IDMPhoto () {
+@interface IDMBasicPhoto () {
     // Image Sources
     NSString *_photoPath;
 
@@ -31,7 +31,7 @@
 @end
 
 // IDMPhoto
-@implementation IDMPhoto
+@implementation IDMBasicPhoto
 
 // Properties
 @synthesize underlyingImage = _underlyingImage, 
@@ -40,16 +40,16 @@ caption = _caption;
 
 #pragma mark Class Methods
 
-+ (IDMPhoto *)photoWithImage:(UIImage *)image {
-	return [[IDMPhoto alloc] initWithImage:image];
++ (IDMBasicPhoto *)photoWithImage:(UIImage *)image {
+	return [[IDMBasicPhoto alloc] initWithImage:image];
 }
 
-+ (IDMPhoto *)photoWithFilePath:(NSString *)path {
-	return [[IDMPhoto alloc] initWithFilePath:path];
++ (IDMBasicPhoto *)photoWithFilePath:(NSString *)path {
+	return [[IDMBasicPhoto alloc] initWithFilePath:path];
 }
 
-+ (IDMPhoto *)photoWithURL:(NSURL *)url {
-	return [[IDMPhoto alloc] initWithURL:url];
++ (IDMBasicPhoto *)photoWithURL:(NSURL *)url {
+	return [[IDMBasicPhoto alloc] initWithURL:url];
 }
 
 + (NSArray *)photosWithImages:(NSArray *)imagesArray {
@@ -57,7 +57,7 @@ caption = _caption;
     
     for (UIImage *image in imagesArray) {
         if ([image isKindOfClass:[UIImage class]]) {
-            IDMPhoto *photo = [IDMPhoto photoWithImage:image];
+            IDMBasicPhoto *photo = [IDMBasicPhoto photoWithImage:image];
             [photos addObject:photo];
         }
     }
@@ -70,7 +70,7 @@ caption = _caption;
     
     for (NSString *path in pathsArray) {
         if ([path isKindOfClass:[NSString class]]) {
-            IDMPhoto *photo = [IDMPhoto photoWithFilePath:path];
+            IDMBasicPhoto *photo = [IDMBasicPhoto photoWithFilePath:path];
             [photos addObject:photo];
         }
     }
@@ -83,11 +83,11 @@ caption = _caption;
     
     for (id url in urlsArray) {
         if ([url isKindOfClass:[NSURL class]]) {
-            IDMPhoto *photo = [IDMPhoto photoWithURL:url];
+            IDMBasicPhoto *photo = [IDMBasicPhoto photoWithURL:url];
             [photos addObject:photo];
         }
         else if ([url isKindOfClass:[NSString class]]) {
-            IDMPhoto *photo = [IDMPhoto photoWithURL:[NSURL URLWithString:url]];
+            IDMBasicPhoto *photo = [IDMBasicPhoto photoWithURL:[NSURL URLWithString:url]];
             [photos addObject:photo];
         }
     }

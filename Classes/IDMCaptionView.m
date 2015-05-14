@@ -7,7 +7,7 @@
 //
 
 #import "IDMCaptionView.h"
-#import "IDMPhoto.h"
+#import "IDMBasicPhoto.h"
 #import <QuartzCore/QuartzCore.h>
 
 static const CGFloat labelPadding = 10;

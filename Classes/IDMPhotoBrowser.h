@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <MessageUI/MessageUI.h>
 
-#import "IDMPhoto.h"
+#import "IDMBasicPhoto.h"
 #import "IDMPhotoProtocol.h"
 #import "IDMCaptionView.h"
 
